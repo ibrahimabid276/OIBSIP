@@ -15,8 +15,6 @@ def get_category(bmi):
         return "Obese", "#ef4444"
 
 
-# ---------------- CLI mode ----------------
-
 def get_number(prompt):
     while True:
         val = input(prompt)
@@ -43,8 +41,6 @@ def run_cli():
     print(f"\nyour bmi is {bmi:.2f}")
     print(f"category: {category}")
 
-
-# ---------------- GUI mode ----------------
 
 def init_db():
     conn = sqlite3.connect(DB_FILE)
@@ -200,8 +196,6 @@ def run_gui():
     app = BMIApp()
     app.mainloop()
 
-
-# ---------------- entry point ----------------
 
 if __name__ == "__main__":
     print("BMI Calculator")
